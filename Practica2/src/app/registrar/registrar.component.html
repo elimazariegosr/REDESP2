@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h1>Registrar Usuario</h1>
+        <input type="text" id="login" class="fadeIn second" #user placeholder="User Name">
+        <input type="text" id="login" class="fadeIn second" #name placeholder="Name">
+        <input type="password" id="login" class="fadeIn second" #pass placeholder="Passowrd">
+        
+        <input type="submit" class="fadeIn fourth" value="Registrar" (click) = "registrar(user.value, name.value, pass.value)">
+    
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Ya tienes una cuenta?</a>
+      </div>
+    </div>
+  </div>
+  

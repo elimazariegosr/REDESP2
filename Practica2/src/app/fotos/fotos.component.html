@@ -1,0 +1,68 @@
+<div  >
+    <table >
+        <tr>
+            <td><h1 style="visibility: hidden">Album </h1></td>
+            <td>
+                <div class="wrappers" *ngFor="let libro of libros">
+                    <div class="wrapper fadeInDown">
+                        <div id="formContent">
+                            <a  (click) = "mostrar(libro)">
+                                <img src="https://image.flaticon.com/icons/png/512/2015/2015041.png" class="fadeIn second" >
+                            </a>
+                        </div>
+                        <p> {{libro.titulo}}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+<div #rep_ast id="rep_ast" class="modal fade show" tabindex="-1" style="display: none; " >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <table>
+              <tr>
+                <td>
+                    <input type="submit" class="fadeIn fourth" value="Eliminar" (click) = "eliminar()">
+                </td>
+                <td>
+                    <input type="submit" class="fadeIn fourth" value="Modificar" (click) = "modificar(t.value, a.value, d.value, p.value, c.value)">
+                </td>
+              </tr>
+          </table>
+          
+          <button type="button" class="close" (click) = "ocultar()"   data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="wrappe">
+                        <div class="wrapper fadeInDown">
+                            <div class="formContent" id="div_image">
+                            </div>            
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="wrappe">
+                        <div class="wrapper fadeInDown">
+                            <div class="formContent" id="div_image">
+                                <input type="text" style="max-height: 40px; " title="Titulo" #t id="titulo">
+                                <input type="text" style="max-height: 40px; " title="Autor"  #a id="autor">
+                                <input type="text" style="max-height: 40px; " title="Descripcion" #d  id="descripcion">
+                                <input type="text" style="max-height: 40px; " title="Precio" #p id="precio">
+                                <input type="text" style="max-height: 40px; " title="Cantidad" #c id="cantidad">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+        
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+        <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="nombre">Editar perfil</h3>
+                
+        </div>
+          <table  style="text-align:center;">
+            <tr>
+                <td>
+                    <input type="text" id="user" class="fadeIn second" #user value="{{sesion.codigo_usuario}}">
+                    <input type="text" id="name" class="fadeIn second" #name value="{{sesion.nombre}}">
+                    <input type="password" id="password" class="fadeIn second" #pass value="{{sesion.pass}}">
+                    <input type="submit" class="fadeIn fourth" value="Modificar" (click)="modificar(user.value, name.value, pass.value)">
+                </td>
+            </tr>  
+          </table>    
+      </div>
+    </div>
